@@ -47,6 +47,12 @@ Plug 'shutnik/jshint2.vim'
 Plug 'isRuslan/vim-es6', { 'for': 'javascript' }
 Plug 'jbgutierrez/vim-babel', { 'for': 'javascript' }
 Plug 'pangloss/vim-javascript'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'mxw/vim-jsx'
+Plug 'valloric/youcompleteme'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'ervandew/supertab'
 
 call plug#end()
 
@@ -59,7 +65,7 @@ let g:airline_right_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_left_sep = ''
-let g:airline_theme='one'
+let g:airline_theme='molokai'
 
 """"""""""""""""""""""""""""""
 " => MRU plugin
@@ -189,3 +195,16 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+""""""""""""""""""""""""""
+" => Vim Snippets
+""""""""""""""""""""""""""
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
